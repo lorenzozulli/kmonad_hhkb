@@ -1,0 +1,39 @@
+;; Lorenzo Zulli ft Kmonad ft HHKB
+;; github.com/kmonad_hhkb
+
+(defcfg
+;; Make sure to put your device file here!
+  input (device-file "/dev/input/by-id/usb-SONiX_USB_DEVICE-event-kbd")
+  output (uinput-sink "KMonad kbd")
+  fallthrough false
+)
+
+(defsrc
+  esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet cmp rctl
+)
+
+
+(deflayer U_BASE
+  esc  1    2    3    4    5    6    7    8    9    0    -    =    \
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    bspc
+  lctl a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+    _  lmet lalt           spc            ralt rmet cmp @fn
+)
+
+(defalias
+	fn (layer-toggle U_FN_LAYER)
+)
+
+(deflayer U_FN_LAYER
+  `  1    2    3    4    5    6    7    8    9    0    -    =    \
+  caps  q    w    e    r    t    y    u    i    o    p    up    ]    bspc
+  lctl a    s    d    f    g    h    j    k    l    left    right    ret
+  lsft z    x    c    v    b    n    m    ,    .    down    rsft
+    _  lmet lalt           spc            ralt rmet cmp rctl
+)
+
