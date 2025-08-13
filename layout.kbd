@@ -30,10 +30,10 @@
 )
 
 (deflayer U_FN_LAYER
-  `  1    2    3    4    5    6    7    8    9    0    -    =    \
-  caps  q    w    e    r    t    y    u    i    o    p    up    ]    bspc
-  lctl a    s    d    f    g    h    j    k    l    left    right    ret
-  lsft z    x    c    v    b    n    m    ,    .    down    rsft
+  `  f1    f2    f3    f4    f5    f6    f7    f8    f9    f10    f11    f12    ins
+  caps  q    w    e    r    t    y    u    i    slck    p    up    ]    bspc
+  lctl a    s    d    f    g    h    /    home    pgup    left    right    ret
+  lsft z    x    c    v    b    +    -    end    pgdn    down    rsft
     _  lmet lalt           spc            ralt rmet cmp rctl
 )
 
